@@ -14,15 +14,20 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(LOCAL_PATH)/pdx234_common.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-PRODUCT_MODEL := XQ-DQ72
-PRODUCT_SYSTEM_NAME := XQ-DQ72
-PRODUCT_SYSTEM_DEVICE := XQ-DQ72
+# Inherit from device.mk
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=$(PRODUCT_SYSTEM_DEVICE) \
-    TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME) \
-    PRIVATE_BUILD_DESC="XQ-DQ72-user 14 67.1.A.2.242 067001A002024200521143226 release-keys"
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-BUILD_FINGERPRINT := Sony/XQ-DQ72/XQ-DQ72:14/67.1.A.2.242/067001A002024200521143226:user/release-keys
+IS_PHONE := true
+
+PRODUCT_NAME := lineage_pdx234
+PRODUCT_DEVICE := pdx234
+PRODUCT_MANUFACTURER := Sony
+PRODUCT_BRAND := Sony
+PRODUCT_GMS_CLIENTID_BASE := android-sonymobile

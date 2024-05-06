@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2019 The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,15 +14,15 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_pdx234.mk \
-    $(LOCAL_DIR)/lineage_pdx234_jp.mk
+$(call inherit-product, $(LOCAL_PATH)/pdx234_common.mk)
 
-COMMON_LUNCH_CHOICES := \
-    lineage_pdx234-user \
-    lineage_pdx234-userdebug \
-    lineage_pdx234-eng \
-    lineage_pdx234_jp-user \
-    lineage_pdx234_jp-userdebug \
-    lineage_pdx234_jp-eng \
+PRODUCT_MODEL := XQ-DQ44
+PRODUCT_SYSTEM_NAME := XQ-DQ44
+PRODUCT_SYSTEM_DEVICE := XQ-DQ44
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE=$(PRODUCT_SYSTEM_DEVICE) \
+    TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME) \
+    PRIVATE_BUILD_DESC="XQ-DQ44-user 14 67.1.A.2.208 067001A002020800236847703 release-keys"
+
+BUILD_FINGERPRINT := Sony/XQ-DQ44/XQ-DQ44:14/67.1.A.2.208/067001A002020800236847703:user/release-keys
