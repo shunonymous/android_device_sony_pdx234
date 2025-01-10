@@ -16,15 +16,15 @@
 
 $(call inherit-product, $(LOCAL_PATH)/lineage_pdx234_common.mk)
 
-PRODUCT_MODEL := XQ-DQ72
-PRODUCT_SYSTEM_NAME := XQ-DQ72
-PRODUCT_SYSTEM_DEVICE := XQ-DQ72
+PRODUCT_MODEL := XQ-DQ44
+PRODUCT_SYSTEM_NAME := XQ-DQ44
+PRODUCT_SYSTEM_DEVICE := XQ-DQ44
 
-PRODUCT_BUILD_PROP_OVERRIDES := \
-    DeviceName=XQ-DQ72 \
-    DeviceProduct=XQ-DQ72 \
-    SystemDevice=XQ-DQ72 \
-    SystemName=XQ-DQ72 \
-    BuildFingerprint=Sony/XQ-DQ72/XQ-DQ72:14/67.1.A.2.307/067001A002030700521143226:user/release-keys \
-    BuildDesc="XQ-DQ72-user 14 67.1.A.2.307 067001A002030700521143226 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DeviceName=XQ-DQ44 \
+    DeviceProduct=XQ-DQ44 \
+    SystemDevice=XQ-DQ44 \
+    SystemName=XQ-DQ44 \
+    BuildFingerprint=Sony/XQ-DQ44/XQ-DQ44:14/67.1.A.2.208/067001A002020800236847703:user/release-keys \
+    BuildDesc="XQ-DQ44-user 14 67.1.A.2.208 067001A002020800236847703 release-keys"
 
